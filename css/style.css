@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto);
+
+body {
+  margin:10px 15px;
+}
+.logo{
+  font-weight: 400;
+  font-family: 'Open Sans', 'Noto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px 20px;
+  width: 50vw;
+  height: 50vw;
+}
+.logo .atomic-mass {
+  font-size: 7vw;
+  /*background: red;*/
+  position: relative;
+  display: inline-block;
+  bottom: 20px;
+}
+
+.logo .atomic-number {
+  font-size: 7vw;
+  /*background: blue;*/
+  position: relative;
+  display: inline-block;
+  bottom: 20px;
+}
+
+.logo .text {
+  font-size: 35vw;
+  text-align: center;
+  font-family: Roboto, 'Noto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+}
