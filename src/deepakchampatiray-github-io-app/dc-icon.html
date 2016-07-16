@@ -1,0 +1,149 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../style/shared-styles.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="/src/deepakchampatiray-github-io-app/dc-logo.html">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<dom-module id="dc-icon">
+  <template>
+    <style  include="shared-styles"></style>
+
+    <style>
+      div.container {
+        position: relative;
+        /*background-color: red;*/
+        width: var(--icon-size, 10)vw;
+        height: var(--icon-size, 10)vw;;
+        display: inline-block;
+        padding : 1vw;
+        font-family: 'Open Sans', 'Noto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      div.container>div {
+        position: relative;
+      }
+      div.black {
+        width: var(--icon-size, 10)vw;
+        height: calc(var(--icon-size, 10)vw + 9vw - 10vw);
+        float: left;
+        top: 0vw;
+        left: 0vw;
+        text-align: center;
+        font-size: 6.8vw;
+        line-height: 6.8vw;
+      }
+      div.logo-svg {
+        height : calc(var(--icon-size, 10)vw + 8.8vw - 10vw);
+        width : calc(var(--icon-size, 10)vw + 8.8vw - 10vw);
+        margin: 0 auto;
+      }
+      div.atomic {
+        width: calc(var(--font-size, 1.4)vw + 2vw);
+        height: calc(var(--font-size, 1.4)vw + 2vw);
+        text-align: center;
+        font-size: var(--font-size, 1.4)vw;
+        line-height: calc(var(--font-size, 1.4)vw + 0vw);
+        padding: 0px;
+      }
+      div.blue {
+        /*background-color: blue;*/
+        top: calc(-var(--font-size, 1.4)vw + 1vw);
+        text-align: left;
+      }
+      div.green {
+        /*background-color: green;*/
+        float: right;
+        text-align: right;
+        top: calc(-var(--icon-size, 10)vw - 9vw + 10vw);
+      }
+      iron-icon {
+        --iron-icon-height: 100%;
+        --iron-icon-width: 100;
+
+        fill:#c95300;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;
+
+        stroke-dasharray : 520;
+        stroke-dashoffset : 520;
+        -webkit-animation : dash1 2s linear forwards, fill1 2s linear forwards;
+        -o-animation : dash1 2s linear forwards, fill1 2s linear forwards;
+        -mox-animation : dash1 2s linear forwards, fill1 2s linear forwards;
+        animation : dash1 2s linear forwards, fill1 2s linear forwards;
+        animation-delay : 0s, 2s;
+        -moz-animation-delay : 0s, 2s;
+        -o-animation-delay : 0s, 2s;
+        -webkit-animation-delay : 0s, 2s;
+        stroke:#fff;
+        fill: #fff;
+        fill-opacity: 0;
+        transition: fill 0.5s ease-out, stroke 0.5s ease-out;
+      }
+
+      @-webkit-keyframes dash1 {
+        from {
+          stroke-dashoffset : 520;
+        }
+        to {
+          stroke-dashoffset : 0;
+        }
+      }
+      @-webkit-keyframes fill1 {
+        from {
+          fill-opacity : 0;
+        }
+        to {
+          fill-opacity : 1;
+        }
+      }
+
+      @keyframes dash1 {
+        from {
+          stroke-dashoffset : 520;
+        }
+        to {
+          stroke-dashoffset : 0;
+        }
+      }
+      @keyframes fill1 {
+        from {
+          fill-opacity : 0;
+        }
+        to {
+          fill-opacity : 1;
+        }
+      }
+
+      iron-icon.dc-icon:hover {
+        fill : #c95300;
+        stroke: #c95300;
+        cursor: pointer;
+      }
+
+    </style>
+    <div class="container default-primary-color divider-color text-primary-color">
+      <div class="black">
+          <iron-icon class="dc-icon" icon="dc-svg-icons:logo" width="100px"></iron-icon>
+          <!-- <iron-icon src="dc-logo.svg"></iron-icon> -->
+          <!-- <iron-icon icon="dcicons:dc" class="dc-icon"></iron-icon> -->
+      </div>
+      <div class="green atomic">[[weight]]</div>
+      <div class="blue atomic">[[age]]</div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'dc-icon',
+
+      properties: {
+        age: {
+          type: Number,
+          value: 30
+        },
+        weight: {
+          type: Number,
+          value: 65
+        }
+      }
+    });
+  </script>
+</dom-module>
