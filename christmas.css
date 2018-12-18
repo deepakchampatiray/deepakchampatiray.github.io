@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.message {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 5rem;
+    /* font-weight: bold; */
+    color: white;
+    overflow: hidden;
+    background: url('stripe.png') repeat-x;
+    animation: moveLeft 20s infinite linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 32px;
+}
+
+@keyframes moveLeft {
+    0% {
+        background-position-x: 0px;
+    }
+    50% {
+        background-position-x: -200px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
