@@ -10,10 +10,28 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     align-items: center;
     justify-content: center;
 }
+.sender {
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.4rem;
+}
+.sender > a {
+    text-decoration: unset;
+    color: white;
+    transition: .5s;
+}
+.sender > a:visited {
+    color: white;
+}
+.sender > a:hover {
+    color: rgb(48, 100, 48);
+}
+
 .message {
     font-family: 'Berkshire Swash', cursive;
     font-size: 5rem;
